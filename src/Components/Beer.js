@@ -1,8 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Beer(props) {
-  const beer1 = 'stuff'
-  const beer2 = "Crux Pilsner";
   return (
     <React.Fragment>
       <h3>{props.name} - {props.brand}</h3>
@@ -13,5 +12,11 @@ function Beer(props) {
     </React.Fragment>
   );
 }
+Beer.propTypes = {
+  name: PropTypes.string,
+  brand: PropTypes.string,
+  alcoholContent: PropTypes.string,
+  count: PropTypes.string
+};
 
 export default Beer;
