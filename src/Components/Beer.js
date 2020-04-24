@@ -1,13 +1,14 @@
 import React from "react";
 
-function Beer() {
-  const beer1 = "Dead Guy Ale";
+function Beer(props) {
+  const beer1 = 'stuff'
   const beer2 = "Crux Pilsner";
   return (
     <React.Fragment>
-      <h3>3a</h3>
-      <h3>{beer1} and {beer2}</h3>
-      <p><em>Firebase entries not saving!</em></p>
+      <h3>{props.name} - {props.brand}</h3>
+      <p>alcohol content: {props.alcoholContent}</p>
+      <p><em>{props.price}</em></p>
+  <p>pints on tap: {props.count}</p>
       <hr/>
     </React.Fragment>
   );

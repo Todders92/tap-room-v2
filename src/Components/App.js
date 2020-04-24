@@ -11,8 +11,8 @@ function App() {
   return (
     <React.Fragment>
       <Header />
-      <TapForm />
       <TapList />
+      <TapForm />
       <KegDetails />
     </React.Fragment>
   )
