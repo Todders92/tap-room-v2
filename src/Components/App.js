@@ -13,7 +13,6 @@ function App() {
       <Header />
       <TapForm />
       <TapList />
-      <Beer />
       <KegDetails />
     </React.Fragment>
   )

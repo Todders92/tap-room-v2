@@ -1,8 +1,15 @@
 import React from "react";
 
 function Beer() {
+  const beer1 = "Dead Guy Ale";
+  const beer2 = "Crux Pilsner";
   return (
-    <h1>Tap Room Beer</h1>
+    <React.Fragment>
+      <h3>3a</h3>
+      <h3>{beer1} and {beer2}</h3>
+      <p><em>Firebase entries not saving!</em></p>
+      <hr/>
+    </React.Fragment>
   );
 }
 

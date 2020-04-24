@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
+import Beer from "./Beer";
 
-function TapList() {
+function TapList(){
   return (
-    <h1>Tap list</h1>
-  )
+    <Beer />
+  );
 }
 
 export default TapList;
