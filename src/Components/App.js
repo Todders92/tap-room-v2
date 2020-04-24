@@ -4,6 +4,7 @@ import './App.css';
 import Header from './Header';
 import TapForm from './TapForm';
 import TapList from './TapList';
+import Beer from './Beer';
 import KegDetails from './KegDetails';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <TapForm />
       <TapList />
+      <Beer />
       <KegDetails />
     </React.Fragment>
   )
