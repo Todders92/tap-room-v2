@@ -1,68 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Todd's Tap Room
 
-## Available Scripts
+#### _A React Application for a fake bar_
 
-In the project directory, you can run:
+#### By _**Todd Walraven | April 24 2020**_
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This React application allows users to add kegs of beer to a taproom. users can update and delete kegs from a taplist as well as view details of each keg they add to the taproom.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Specifications:
 
-### `npm test`
+* A user will be able to pull a full list of beers on tap
+* A user will be able to add new beers to the taproom.
+* A user will be able to edit an beer entry in the taproom by filling out form.
+* A user will be able to remove an entry from the taproom.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Setup/Installation Requirements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Clone this repository
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+_Enter the following commands in Terminal (macOS) or PowerShell (Windows):_
+* ``cd desktop``
+* ``git clone https://github.com/Todders92/tap-room-v2``
+* ``cd tap-room``
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+_Confirm that you have navigated to the tap room directory (e.g., by entering the command_ ``pwd`` _in Terminal)._
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+_Run the application by using the command npm run start_
+* ``npm run start``
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+_To view/edit the source code of this application, open the contents of the ``tap-room`` directory in a text editor or IDE of your choice (e.g., to open all contents of the directory in Visual Studio Code on macOS, enter the command_ ``code .`` _in Terminal)._
 
-## Learn More
+## Technologies Used
+* _Git_
+* _React_
+* _Node.js_
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+*This webpage is licensed under the MIT license.*
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Copyright (c) 2020 **_Todd Walraven_**
