@@ -20,7 +20,7 @@ function ReusableForm(props) {
         <input
           type='text'
           name='alcoholContent'
-          placeholder='Alcohol Content' /><br />\
+          placeholder='Alcohol Content' /><br />
         <input
           type='text'
           name='count'
