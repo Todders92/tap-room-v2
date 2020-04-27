@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
 
-function TapForm() {
+function TapForm(props){
   return (
-    <h1>Tap Form</h1>
-  )
+    <React.Fragment>
+      <h3>This is a form.</h3>
+    </React.Fragment>
+  );
 }
 
 export default TapForm;

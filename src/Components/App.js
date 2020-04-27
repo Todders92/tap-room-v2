@@ -3,15 +3,14 @@ import React from 'react';
 import './App.css';
 import Header from './Header';
 import TapForm from './TapForm';
-import TapList from './TapList';
-import Beer from './Beer';
 import KegDetails from './KegDetails';
+import TapRoomControl from './TapRoomControl';
 
 function App() {
   return (
     <React.Fragment>
       <Header />
-      <TapList />
+      <TapRoomControl />
       <TapForm />
       <KegDetails />
     </React.Fragment>
