@@ -1,26 +1,28 @@
 import React from "react";
-import Beer from "./Beer";
+import Keg from "./Keg";
 import PropTypes from "prop-types";
 
-
-function TapList(props) { 
+function KegList(props) {
   return (
     <React.Fragment>
       <hr />
-      {props.tapList.map((beer, index) => 
-        <Beer name={beer.name}
-          brand={beer.brand}
-          price={beer.price}
-          alcoholContent={beer.alcoholContent}
-          count={beer.count}
-          key={index} />
+      {props.kegList.map((keg) =>
+        <Keg 
+          whenKegClicked={ props.onKegSelection }
+          name={keg.name}
+          brand={keg.brand}
+          price={keg.price}
+          alcoholContent={keg.alcoholContent}
+          id={keg.id}
+          key={keg.id} />
       )}
     </React.Fragment>
   );
 }
 
-TapList.propTypes = {
-  tapList: PropTypes.array
+KegList.propTypes = {
+  kegList: PropTypes.array,
+  onKegSelection: PropTypes.func
 };
 
-export default TapList;
+export default KegList;
