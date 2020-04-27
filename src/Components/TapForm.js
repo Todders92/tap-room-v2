@@ -1,5 +1,7 @@
 import React from "react";
 import { v4 } from 'uuid';
+import PropTypes from "prop-types";
+
 
 function TapForm(props){
   
@@ -7,9 +9,7 @@ function TapForm(props){
   beer.id = v4()
   function handleNewTapFormSubmission(event) {
     event.preventDefault();
-    console.log(event.target.names.value);
-    console.log(event.target.location.value);
-    console.log(event.target.issue.value);
+    props.onNewTapCreation({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, alcoholContent: event.target.alcoholContent.value, count: event.target.count.value, id: v4()});
   }
 
   return (
@@ -36,7 +36,11 @@ function TapForm(props){
       </form>
     </React.Fragment>
   );
-    
+  
+  
 }
+TapForm.propTypes = {
+  onNewTapCreation: PropTypes.func
+};
 
 export default TapForm;

@@ -1,21 +1,21 @@
 import React from "react";
 import Beer from "./Beer";
+import PropTypes from "prop-types";
 
-const masterTapList = [ ... ];
 
-function TapList(props){
+function TapList(props) { 
   return (
     <React.Fragment>
-    <hr/>
-    {props.TapList.map((beer, index) =>
-      <Beer name={beer.name}
-        brand={beer.brand}
-        alcoholContent={beer.alcoholContent}
-        price={beer.price}
-        count={beer.count}
-        key={index}/>
-    )}
-  </React.Fragment>
+      <hr />
+      {props.tapList.map((beer, index) => 
+        <Beer name={beer.name}
+          brand={beer.brand}
+          price={beer.price}
+          alcoholContent={beer.alcoholContent}
+          count={beer.count}
+          key={index} />
+      )}
+    </React.Fragment>
   );
 }
 

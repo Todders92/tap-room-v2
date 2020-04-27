@@ -18,15 +18,20 @@ class TapRoomControl extends React.Component {
     }));
   }
 
+  handleAddingNewBeerToList = (newBeer) => {
+    const newMasterTapList = this.state.masterTapList.concat(newBeer);
+    this.setState({masterTapList: newMasterTapList,
+                  formVisibleOnPage: false });
+    }
   render(){
     let currentlyVisibleState = null;
     let buttonText = null; 
     if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <TapForm />;
-      buttonText = "Return to Beer List"; 
+      currentlyVisibleState = <TapForm onNewBeerCreation={this.handleAddingNewBeerToList}  />;
+      buttonText = "Return to Tap List";
     } else {
-      currentlyVisibleState = <TapList />;
-      buttonText = "Add Beer";
+      currentlyVisibleState = <TapList tapList={this.state.masterTapList} />;
+      buttonText = "Add Beer"; 
     }
     return (
       <React.Fragment>

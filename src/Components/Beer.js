@@ -7,7 +7,7 @@ function Beer(props) {
       <h3>{props.name} - {props.brand}</h3>
       <p>alcohol content: {props.alcoholContent}</p>
       <p><em>{props.price}</em></p>
-  <p>pints on tap: {props.count}</p>
+      <p>pints on tap: {props.count}</p>
       <hr/>
     </React.Fragment>
   );
