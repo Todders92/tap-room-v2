@@ -3,17 +3,22 @@ import { v4 } from 'uuid';
 import PropTypes from "prop-types";
 
 
+
 function TapForm(props){
   
-  const beer = {};
-  beer.id = v4()
   function handleNewTapFormSubmission(event) {
     event.preventDefault();
-    props.onNewTapCreation({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, alcoholContent: event.target.alcoholContent.value, count: event.target.count.value, id: v4()});
+    props.onNewTapCreation({
+      name: event.target.name.value, 
+      brand: event.target.brand.value,
+      price: event.target.price.value,
+      alcoholContent: event.target.alcoholContent.value,
+      count: event.target.count.value, 
+      id: v4()});
   }
 
-  return (
-    <React.Fragment>
+return (
+  <React.Fragment>
       <form onSubmit={handleNewTapFormSubmission}>
         <input
           type='text'
@@ -27,7 +32,7 @@ function TapForm(props){
           name='price'
           placeholder='Price Per Pint' />
         <input
-          name='alcholContent'
+          name='alcoholContent'
           placeholder='alcohol Content' />
         <input
           name='count'
@@ -37,10 +42,12 @@ function TapForm(props){
     </React.Fragment>
   );
   
-  
 }
+
+
 TapForm.propTypes = {
   onNewTapCreation: PropTypes.func
 };
+
 
 export default TapForm;
