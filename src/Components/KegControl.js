@@ -78,7 +78,7 @@ class KegControl extends React.Component {
       onNewKegCreation={this.handleAddingNewKegToList} />
       buttonText = "Return to Keg List";
     } else {
-      currentlyVisibleState = <KegList KegList={this.state.masterKegList} onKegSelection={this.handleChangingSelectedKeg} />;
+      currentlyVisibleState = <KegList kegList={this.state.masterKegList} onKegSelection={this.handleChangingSelectedKeg} />;
       buttonText = "Add Keg"; 
     }
     return (
@@ -92,74 +92,3 @@ class KegControl extends React.Component {
 }
 
 export default KegControl;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from 'react';
-// import TapForm from './newKegForm';
-// import TapList from './TapList';
-
-// class TapRoomControl extends React.Component {
-
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       formVisibleOnPage: false,
-//       masterTapList: []
-//     };
-//   }
-
-//   handleClick = () => {
-//     this.setState(prevState => ({
-//       formVisibleOnPage: !prevState.formVisibleOnPage
-//     }));
-//   }
-
-//   handleAddingNewBeerToList = (newBeer) => {
-//     const newMasterTapList = this.state.masterTapList.concat(newBeer);
-//     this.setState({masterTapList: newMasterTapList,
-//                   formVisibleOnPage: false });
-//     }
-//   render(){
-//     let currentlyVisibleState = null;
-//     let buttonText = null; 
-//     if (this.state.formVisibleOnPage) {
-//       currentlyVisibleState = <TapForm onNewTapCreation={this.handleAddingNewBeerToList}  />;
-//       buttonText = "Return to Tap List";
-//     } else {
-//       currentlyVisibleState = <TapList tapList={this.state.masterTapList} />;
-//       buttonText = "Add Beer"; 
-//     }
-//     return (
-//       <React.Fragment>
-//         {currentlyVisibleState}
-//         <button onClick={this.handleClick}>{buttonText}</button>
-//       </React.Fragment>
-//     );
-//   }
-
-// }
-
-// export default TapRoomControl;
