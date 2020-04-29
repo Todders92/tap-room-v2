@@ -16,12 +16,12 @@ This React application allows users to add kegs of beer to a taproom. users can 
 * A user will be able to remove an entry from the taproom.
 
 
+## Component Diagram
 
+![Component Map](src\ComponentDiagram.png)
 
 ## Setup/Installation Requirements
 
-
-### Clone this repository
 
 _Enter the following commands in Terminal (macOS) or PowerShell (Windows):_
 * ``cd desktop``
@@ -29,6 +29,9 @@ _Enter the following commands in Terminal (macOS) or PowerShell (Windows):_
 * ``cd tap-room``
 
 _Confirm that you have navigated to the tap room directory (e.g., by entering the command_ ``pwd`` _in Terminal)._
+
+_install dependancies for the application by using the command npm install_
+* ``npm install``
 
 _Run the application by using the command npm run start_
 * ``npm run start``
