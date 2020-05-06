@@ -1,8 +1,8 @@
 import React from 'react';
-import NewKegForm from './NewKegForm';
-import EditKegForm from './EditKegForm';
-import KegList from './KegList';
-import KegDetail from './KegDetail';
+import NewKegForm from './NewKegForm.js';
+import EditKegForm from './EditKegForm.js';
+import KegList from './KegList.js';
+import KegDetail from './KegDetail.js';
 
 class KegControl extends React.Component {
 
@@ -56,6 +56,36 @@ class KegControl extends React.Component {
       this.setState({masterKegList: editedMasterKegList, editing: false, selectedKeg: null});
   }
 
+  handleKegPurchase = (id) => {
+    console.log(id);
+    const currentlySelectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
+    console.log(currentlySelectedKeg);
+    console.log(this.state.masterKegList);
+    const newQuantityOfKeg = currentlySelectedKeg.count - 1;
+    const updatedKeg = {...currentlySelectedKeg, count: newQuantityOfKeg};
+    const previousKegList = this.state.masterKegList.filter(keg => keg.id !== id);
+    this.setState({
+      masterKegList: [...previousKegList, updatedKeg],
+      selectedKeg: updatedKeg
+    });
+  }
+
+  handleKegRefill = (id) => {
+    const currentlySelectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
+    const newQuantityOfKeg = currentlySelectedKeg.quantity + 10;
+    const updatedKeg = {...currentlySelectedKeg, quantity: newQuantityOfKeg };
+    const previousKegList = this.state.masterKegList.filter(keg => keg.id !== id);
+    this.setState({
+      masterKegList: [...previousKegList, updatedKeg],
+      selectedKeg: updatedKeg
+    });
+  }
+
+  handleChangingSelectedKeg = (id) => {
+    const selectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
+    this.setState({selectedKeg: selectedKeg});
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -78,7 +108,10 @@ class KegControl extends React.Component {
       onNewKegCreation={this.handleAddingNewKegToList} />
       buttonText = "Return to Keg List";
     } else {
-      currentlyVisibleState = <KegList kegList={this.state.masterKegList} onKegSelection={this.handleChangingSelectedKeg} />;
+      currentlyVisibleState = <KegList kegList={this.state.masterKegList} 
+      onKegSelection={this.handleChangingSelectedKeg} 
+      onClickingSell={this.handleKegPurchase}
+      onClickingRefill={this.handleKegRefill} />
       buttonText = "Add Keg"; 
     }
     return (
